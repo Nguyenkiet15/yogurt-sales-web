@@ -127,6 +127,71 @@ article{
 #homemain{
     grid-template-areas: "aside" "article" "aside";
 }
+/*CHIEN_REGION - grid layout - trang san pham*/
+/*order: section -> h1, div -> ul -> h1, p, span*/
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    color: #ed4190;
+}
+
+.span_product{
+    display: block;
+    margin: 4px;
+    padding: 3px;
+    color: black;
+    text-align: center;
+    width: 100%;
+    line-height: 2em;
+}
+
+#product_h1{
+    color: #ed4190;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 15% 100%;
+    background-position: center;
+    background-image: linear-gradient(to top, #cddc39 0%,#fff 10%);
+}
+
+/* Display in each div */
+#div_product {
+    display: flex;
+    flex: 1;
+    height: fit-content;
+    flex-direction: column;
+    margin: 3px;
+    border: 1px solid #dbd7d9;
+    border-radius: 1%;
+    color: #ed4190;
+    background-image: linear-gradient(to top,  #cddc39 0%,#fff 10% );
+    text-align: center;
+}
+
+div>img{
+    display: block;
+    margin: auto;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    justify-content: flex-start;
+}
+div>h2{
+    flex-shrink: 0;
+    flex-basis: 5%;
+}
+
+div>p{
+    font-size: 18px; /* Để giống với hướng dẫn nhất có thể*/
+    flex-shrink:0; /* Để co lại theo yêu cầu thui*/
+    flex-basis: 20%; /*130px là để tag p của các div căn đều nhau*/
+    text-align: justify;
+    margin: auto;
+    padding: 0 5px;   
+    color: black;
+}
+/* END_CHIEN_REGION */
 
 /*.............footer style...............*/
 footer{
