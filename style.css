@@ -1,3 +1,4 @@
+/*..Don't repeat yourself.*/
 body {
     display: grid;
     border: 1px;
@@ -118,6 +119,7 @@ aside{
     margin: 2px;
     padding: 5px;
     size: 1fr;
+    color: #000;
 }
 
 article{
@@ -127,7 +129,234 @@ article{
 #homemain{
     grid-template-areas: "aside" "article" "aside";
 }
-/*CHIEN_REGION - grid layout - trang san pham*/
+
+/*.............footer style...............*/
+footer{
+    grid-area: footer-cell;
+    margin-top: 2px ;
+    border-radius: 5px;
+    border: 1px #cc7c8c;
+    padding: 50px 5px;
+
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+.center-footer {
+    flex: 0 1 auto;
+    position: absolute;
+    /* new */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+.on-top{
+    padding: 10px;
+    color: #ed4190;
+    background-image: url("./TH_B2_Data/top.png");
+    /*change bg size*/
+    background-size: 80px;
+    width: 61px;
+    height: 61px;
+    z-index: 100;
+    flex: 0 1 auto;
+    margin-left: auto;
+}
+.fa-facebook{
+    color: #ed4190;
+}
+.fa-twitter{
+    color: #ed4190;
+}
+.fa-pinterest{
+    color: #ed4190;
+}
+
+.dathang > div{
+    display: flex;
+    margin-bottom: 5%;
+    width: 24%;
+    text-align: center;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5 0 0 0;
+    border: 1px solid #ed4190;
+   
+}
+
+.lienket a{
+    text-decoration: none;
+}
+
+.parent-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 34px;
+    color: #f90b6d;
+    font-size: 28px;
+    margin: 12 0 16 0;
+    text-align: center;
+    
+}
+
+h1::after{
+    position: relative;
+    display: block;
+    content: '';
+    text-decoration: underline;
+    transform: skewX(-12deg) translateX(50%);
+    background: radial-gradient(#cddc39, #fff);
+    width: 200px;
+    height: 3px;
+    margin: 12 0 16 0;
+    left: 30.5%;
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 28px;
+    color: #f90b6d;
+    font-size: 24px;
+    margin: 5 0 10 0;
+}
+
+.huongdan{
+    column-count: 2;
+    text-align: justify;
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif;
+    break-before: column;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 5 0 10 0;
+    font-size: 20px;
+    color: #f90b6d;
+}
+
+.type1{
+    display: flex;
+    padding: 0 5px 0 5px;
+    margin: 0 0 5px 0;
+}
+
+.hinhanh1{
+    width: 33%;
+}
+
+.noidung1{
+    width: 67%;
+    text-align: justify;
+}
+
+.type2{
+    display: flex;
+    padding: 0 5px 0 5px;
+    margin: 0 0 5px 0;
+}
+
+.media{
+    width: 30%;
+}
+
+.noidung2{
+    width: 69%;
+    text-align: justify;
+}
+
+h2, p, .media, .hinhanh1 {
+    margin: 0;
+    padding: 5px;
+}
+
+h2, h3{
+    margin: 0;
+    padding: 5px;
+}
+
+/* =====contact====== */
+.fa-diachi{
+    width: 15px;
+    height: 20px;
+    background-color: #cddc39;
+    padding: 5px 10px;
+    max-width: 30px;
+}
+
+
+.fa-envelope{
+    color: white;
+   
+    height: 20px;
+    background-color: #cddc39;
+    padding: 6px 6px;
+    max-width: 30px;
+}
+
+.fa-user{
+    color: #fff;
+    height: 20px;
+    padding: 6px 8.5px;
+    max-width: 30px;
+    background-color: #cddc39;
+}
+
+.fa-file{
+    color: #fff;
+    height: 20px;
+    padding: 6px 7px;
+    max-width: 30px;
+    background-color: #cddc39;
+}
+
+.fa-bars{
+    color: #fff;
+    height: 20px;
+    padding: 6px 7.5px;
+    max-width: 30px;
+    background-color: #cddc39;
+}
+
+/* để có thể giống giao diện của thầy nhất :vv*/
+.footer-cell{
+    border-style:solid;
+    border-width: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    border-color: silver;
+}
+
+.main-cell{
+    top: px;
+    border-style:solid;
+    border-width: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    padding: 0px 5px;
+    border-color: silver;
+}   
+
+.table-center{
+    display: flex;
+    justify-content: center;
+}
+
+.p-diachi{
+    font-weight: bold;
+}
+/*..........exercise 3.............*/
+/*add style here */
+/*Chien_region - grid layout - trang san pham*/
 /*order: section -> h1, div -> ul -> h1, p, span*/
 
 .flex-container {
@@ -144,7 +373,7 @@ article{
     color: black;
     text-align: center;
     width: 100%;
-    line-height: 2em;
+    line-height: 20px;
 }
 
 #product_h1{
@@ -155,6 +384,7 @@ article{
     background-position: center;
     background-image: linear-gradient(to top, #cddc39 0%,#fff 10%);
 }
+
 
 /* Display in each div */
 #div_product {
@@ -191,46 +421,183 @@ div>p{
     padding: 0 5px;   
     color: black;
 }
-/* END_CHIEN_REGION */
+/* End_Chien_region */
 
-/*.............footer style...............*/
-footer{
-    grid-area: footer-cell;
-    margin-top: 2px ;
-    border-radius: 5px;
-    border: 1px #cc7c8c;
-    padding: 50px 5px;
+/*..........exercise 4.............*/
+/*add style here */
 
+/* === introduce ====*/
+.gird-container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'article-cell article-cell article-cell right-cell';
+  }
+  
+  .article2{
+    grid-area: article-cell;
+    text-align: justify;
+   
+  }
+  
+  .aside-right2{
+    grid-area: right-cell;
+    text-align: justify;
+  }
+
+  .img-introduct{
+    height: 185px;
+  }
+
+/* Login */
+/*Bo cuc trang Tin tuc*/
+.fa-key{
+    color: white;
+    height: 20px;
+    background-color: #cddc39;
+    padding: 6px 6px;
+    max-width: 30px;
+}
+
+fieldset {
+    border: 0;
+}
+
+/*=== news ===*/
+.gird-container3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-areas:
+    'left-cell article-cell article-cell article-cell';
+  }
+
+
+  .aside-left3{
+    grid-area: left-cell;
+    text-align: justify;
+  }
+
+  .article3{
+    grid-area: article-cell;
+    text-align: justify;
+
+  }
+
+
+#img {
+    display: block;
+    max-width:230px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+  }
+  .new{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-areas:
+     'text img';
+     grid-column-gap:10px;
+  }
+
+  .text-news{
+    grid-area: text;
+  }
+
+  .img-news{
+    grid-area: img;
+  }
+
+/*Kich thuoc trang ô input*/
+.textboxid{
+    height: 25px;
+    font-size: 15px;
+}
+
+/* Heading 1 - news 
+sua heding trang Tin tuc*/
+  .h1-aside-left-news::after{
+    transform: skewX(-12deg) translateX(50%);
+    background: radial-gradient(#cddc39, #fff);
+    width: 200px;
+    height: 3px;
+    margin: 12 0 16 0;
+    left: -30%;
+}
+
+.h1-article-news::after{
+    transform: skewX(-12deg) translateX(50%);
+    background: radial-gradient(#cddc39, #fff);
+    width: 200px;
+    height: 3px;
+    margin: 12 0 16 0;
+    left: 24%;
+}
+
+
+/*=== REGISTER ====*/
+.fa-users{
+    color: white;
+    height: 20px;
+    background-color: #cddc39;
+    padding: 6px 5px;
+    max-width: 30px;
+}
+
+.fa-camera{
+    color: white;
+    height: 20px;
+    background-color: #cddc39;
+    padding: 6px 5px;
+    max-width: 30px;
+}
+
+/*Ngắt dòng điều khoản*/
+.dieukhoan{
+    word-wrap :break-word;
+}
+
+.fieldset-gird{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+     'aa table-cell bb';
+     margin: 50px;
+}
+
+.table-center{
+    grid-area: table-cell;
     display: flex;
-    justify-content: flex-start;
-    position: relative;
+    justify-content: center;
+    word-wrap :break-word;
 }
-.center-footer {
-    flex: 0 1 auto;
-    position: absolute;
-    /* new */
-    left: 50%;
-    transform: translateX(-50%);
-}
-.on-top{
-    padding: 10px;
-    color: #ed4190;
-    background-image: url("./TH_B2_Data/top.png");
-    /*change bg size*/
-    background-size: 80px;
-    width: 61px;
-    height: 61px;
-    z-index: 100;
 
-    flex: 0 1 auto;
-    margin-left: auto;
+/* ==== chinh sửa heading 1 - Register====*/
+.h1-register::after{
+    transform: skewX(-12deg) translateX(50%);
+    background: radial-gradient(#cddc39, #fff);
+    width: 200px;
+    height: 3px;
+    margin: 12 0 16 0;
+    left: 15%;
 }
-.fa-facebook{
-    color: #ed4190;
+
+/* ==== Chỉnh sửa heading 1 - introduce === */
+.h1-right-introduce::after{
+    transform: skewX(-12deg) translateX(50%);
+    background: radial-gradient(#cddc39, #fff);
+    width: 200px;
+    height: 3px;
+    margin: 12 0 16 0;
+    left: -22%;
 }
-.fa-twitter{
-    color: #ed4190;
+
+.h1-article-introduce::after{
+    transform: skewX(-12deg) translateX(50%);
+    background: radial-gradient(#cddc39, #fff);
+    width: 200px;
+    height: 3px;
+    margin: 12 0 16 0;
+    left: 23%;
 }
-.fa-pinterest{
-    color: #ed4190;
-}
+
+

@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="logo" href="images/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Đăng Nhập</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="logo" type="image/vnd.microsoft.icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Đăng Nhập</title>
 </head>
-<body>
-    <header>
-        <a href="home.html"><img width="400px" src="images/logo.png" alt="header picture"></a>
-    </header>
-        <nav>
-            <a href="home.html">trang chủ</a>
-            <a href="about.html">giới thiệu</a>
-            <a href="product.html">sản phẩm</a>
-            <a href="new.html">tin tức</a>
-            <a href="login.html">đăng nhập</a>
-            <a href="register.html">đăng ký</a>
-            <a href="contact.html">liên hệ</a>
-        </nav>
-        <main>
-            <fieldset>
-               <legend>ĐĂNG NHẬP</legend> 
-              <table>
-                <tr>
-                    <td></td>
-                    <td>
-                        <img src="/images/dangnhap/userlogin.png" alt="" width="200px">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td>
-                        <label for="email">
-                            <input name="email" id="email" type="text" placeholder="nhập email" size="40px" >
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Mật khẩu</td>
-                    <td>
-                        <label for="password">
-                            <input nameid="password" type="password" placeholder="nhập mật khẩu" size="40px" >
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                         <input type="submit" value="Đăng Nhập">
-                         <input type="reset" value="Hủy">
-                       
-                    </td>
-                </tr>
-                <tr>
-                    <td>Bạn quên 
-                        <a href="">Mật Khẩu?</a>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="remember" id="">Ghi nhớ cho lần đăng nhập sau</input>
-                    </td>
-                </tr>
-              </table>
-            </fieldset>
-        </main>
-    <footer>
-        <span>&COPY; 2021 Bản quyền thuộc về FreeezeVN.</span> <a href="">twitter</a> <a href="">pinterest</a> <a href="">Về Đầu Trang</a>  
-    </footer>
+
+<body id="homebody">
+
+  <header>
+    <a href="home.html"><img src="images/logo.png" alt="header picture"></a>
+    <img class="header-img1" src="./TH_B2_Data/header-img1.png" alt="">
+    <img class="header-img2" src="./TH_B2_Data/header-img2.png" alt="">
+    <img class="header-img3" src="/TH_B2_Data/header-img3.png" alt="">
+
+    <nav>
+      <div class="lienket">
+        <a href="index.html">Trang chủ</a>
+        <a href="introduce.html">Giới thiệu</a>
+        <a href="product.html">Sản phẩm</a>
+        <a href="news.html">Tin tức</a>
+        <a href="login.html">Đăng nhập</a>
+        <a href="register.html">Đăng ký</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+
+      <div>
+        <form id="searchForm" action="/timkiem.html" method="get">
+          <input required id="searchBox" name="search" type="text" placeholder="Nhập nội dung cần tìm..." width="30px">
+          <button id="search"><i class="fa fa-search"></i></button>
+          <button><i class="fa fa-shopping-cart"></i></button>
+        </form>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="main-cell">
+    <fieldset>
+      <h1>
+        <legend>ĐĂNG NHẬP</legend>
+      </h1>
+      <form onsubmit="return formValidateSubmitLogin()" method="get">
+        <table class="table-center">
+          <tr>
+            <td colspan="2">
+              <img src="/images/dangnhap/userlogin.png" alt="" width="200px">
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-envelope"></i></td>
+            <td>
+              <label for="email">
+                <input name="email" id="email" type="text" placeholder="Nhập email" size="40px" class="textboxid">
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-key"></i></td>
+            <td>
+              <label for="password">
+                <input nameid="password" type="password" placeholder="Nhập mật khẩu" size="40px" class="textboxid">
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">Bạn quên
+              <a href="">Mật Khẩu?</a>
+              <input type="checkbox" name="remember" id="">Ghi nhớ cho lần đăng nhập sau</input>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input class="textboxid" type="submit" value="Đăng Nhập">
+              <input class="textboxid" type="reset" value="Hủy">
+
+            </td>
+          </tr>
+        </table>
+      </form>
+    </fieldset>
+  </main>
+
+  <footer class="footer-cell">
+    <div class="center-footer">
+      <span>&COPY; 2021 Bản quyền thuộc về FreeezeVN.</span>
+      <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+    </div>
+    <!--về đầu trang-->
+    <a class="on-top" href=""></a>
+  </footer>
+
 </body>
+<script src="javascript.js"></script>
+
 </html>
