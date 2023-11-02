@@ -1,85 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="logo" href="images/favicon.ico" type="image/vnd.microsoft.icon">
-    <title>Đăng Ký</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./images/favicon.ico">
+  <title>Liên hệ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <header>
-        <a href="home.html"><img width="400px" src="images/logo.png" alt="header picture"></a>
-    </header>
-        <nav>
-            <a href="home.html">trang chủ</a>
-            <a href="about.html">giới thiệu</a>
-            <a href="product.html">sản phẩm</a>
-            <a href="new.html">tin tức</a>
-            <a href="login.html">đăng nhập</a>
-            <a href="register.html">đăng ký</a>
-            <a href="contact.html">liên hệ</a>
-        </nav>
-        <main>
-            <fieldset>
-               <legend>Đăng Ký</legend> 
-              <table>
-                <tr>
-                    <td>Email</td>
-                    <td>
-                        <label for="email">
-                            <input name="email" id="email" type="text" placeholder="Vui lòng nhập email" size="40px" >
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Mật khẩu</td>
-                    <td>
-                        <label for="password">
-                            <input nameid="password" type="password" placeholder="Vui lòng nhập mật khẩu" size="40px" >
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nhập lại Mật khẩu</td>
-                    <td>
-                        <label for="password">
-                            <input id="password" type="password" placeholder="Vui lòng nhập mật khẩu" size="40px" >
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Cấp độ thành viên</td>
-                    <td>
-                        <label for="memberType">
-                            <input type="radio" name="memberType" value="silver">Bạc</input>
-                            <input type="radio" name="memberType" value="gold">Vàng</input>
-                            <input type="radio" name="memberType" value="platium">Bạch Kim</input>
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ảnh đại diện</td>
-                    <td>
-                        <input type="file" name="file" id="file">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                       Thông qua việc tạo tài khoản, bạn đồng ý với
-                    <a href="">Điều khoản & Quyền riêng tư của chúng tôi.</a> 
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="reset" value="Hủy">
-                        <input type="submit" value="Đăng ký">
-                    </td>
-                </tr>
-              </table>
-            </fieldset>
-        </main>
-    <footer>
-        <span>&COPY; 2021 Bản quyền thuộc về FreeezeVN.</span> <a href="">twitter</a> <a href="">pinterest</a> <a href="">Về Đầu Trang</a>  
-    </footer>
+
+<body id="homebody">
+
+  <header>
+    <a href="home.html"><img src="images/logo.png" alt="header picture"></a>
+    <img class="header-img1" src="./TH_B2_Data/header-img1.png" alt="">
+    <img class="header-img2" src="./TH_B2_Data/header-img2.png" alt="">
+    <img class="header-img3" src="./TH_B2_Data/header-img3.png" alt="">
+    <nav>
+      <div class="lienket">
+        <a href="index.html">Trang chủ</a>
+        <a href="introduce.html">Giới thiệu</a>
+        <a href="product.html">Sản phẩm</a>
+        <a href="news.html">Tin tức</a>
+        <a href="login.html">Đăng nhập</a>
+        <a href="register.html">Đăng ký</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+
+      <div>
+        <form id="searchForm" action="/timkiem.html" method="get">
+          <input required id="searchBox" name="search" type="text" placeholder="Nhập nội dung cần tìm..." width="30px">
+          <button id="search"><i class="fa fa-search"></i></button>
+          <button><i class="fa fa-shopping-cart"></i></button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-cell">
+    <fieldset class="fieldset-gird">
+      <div></div>
+
+      <div>
+        <legend>
+          <h1 class="h1-register">Đăng Ký</h1>
+        </legend>
+        <table class="table-center">
+          <tr>
+            <td><i class="fa fa-envelope"></i></td>
+            <td>
+              <label for="email">
+                <input class="textboxid" name="email" id="email" type="text" placeholder="Vui lòng nhập email"
+                  size="40px">
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><i class="fa fa-key"></i></td>
+            <td>
+              <label for="password">
+                <input class="textboxid" id="password" type="password" placeholder="Vui lòng nhập mật khẩu" size="40px">
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><i class="fa fa-key"></i></td>
+            <td>
+              <label for="password">
+                <input class="textboxid" id="password" type="password" placeholder="Vui lòng nhập mật khẩu" size="40px">
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><i class="fa fa-users"></i></td>
+            <td>
+              <label for="memberType">
+                <input type="radio" name="memberType" value="silver">Bạc</input>
+                <input type="radio" name="memberType" value="gold">Vàng</input>
+                <input type="radio" name="memberType" value="platium">Bạch Kim</input>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><i class="fa fa-camera"></i></td>
+            <td>
+              <input class="textboxid" type="file" name="file" id="file">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              Thông qua việc tạo tài khoản, bạn đồng ý với
+              <a href="">Điều khoản & Quyền riêng tư của chúng tôi.</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="reset" value="Hủy">
+              <input type="submit" value="Đăng ký">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div></div>
+    </fieldset>
+
+
+  </main>
+
+  <footer class="footer-cell">
+    <div class="center-footer">
+      <span>&COPY; 2021 Bản quyền thuộc về FreeezeVN.</span>
+      <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+    </div>
+    <!--về đầu trang-->
+    <a class="on-top" href=""></a>
+  </footer>
+  <script scr="javascript.js"></script>
 </body>
+
 </html>
