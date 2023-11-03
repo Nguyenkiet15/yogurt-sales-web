@@ -18,7 +18,7 @@
     <img id="img-product" class="header-img3" src="/TH_B2_Data/header-img3.png" alt="">
     <nav>
       <div>
-        <a href="index.html">Trang chủ</a>
+        <a href="home.html">Trang chủ</a>
         <a href="introduce.html">Giới thiệu</a>
         <a href="product.html">Sản phẩm</a>
         <a href="news.html">Tin tức</a>
@@ -31,7 +31,7 @@
         <form id="searchForm" action="/timkiem.html" method="get">
           <input required id="searchBox" name="search" type="text" placeholder="Nhập nội dung cần tìm..." width="30px">
           <button id="search"><i class="fa fa-search"></i></button>
-          <button><i class="fa fa-shopping-cart"></i></button>
+          <a href="order.html"><i id="order" class="fa fa-shopping-cart"></i></a>
         </form>
       </div>
     </nav>
@@ -50,7 +50,7 @@
           </p>
           <span class="span_product">
             <label>Số lượng:</label>
-            <input type="number" min="0" max="100" value="0" size="3">
+            <input id="sp001" type="number" min="0" max="100" value="0" size="3">
             <button>Đặt hàng</button>
           </span>
         </div>
@@ -186,7 +186,7 @@
     <!--về đầu trang-->
     <a class="on-top" href=""></a>
   </footer>
-  <script scr="javascript.js"></script>
-</body>
 
+</body>
+<script src="./javascript.js"></script>
 </html>

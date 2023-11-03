@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="./images/favicon.ico">
-  <title>Liên hệ</title>
+  <link rel="logo" type="image/vnd.microsoft.icon" href="./images/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Đăng Nhập</title>
 </head>
 
 <body id="homebody">
@@ -16,7 +16,8 @@
     <a href="home.html"><img src="images/logo.png" alt="header picture"></a>
     <img class="header-img1" src="./TH_B2_Data/header-img1.png" alt="">
     <img class="header-img2" src="./TH_B2_Data/header-img2.png" alt="">
-    <img class="header-img3" src="./TH_B2_Data/header-img3.png" alt="">
+    <img class="header-img3" src="/TH_B2_Data/header-img3.png" alt="">
+
     <nav>
       <div class="lienket">
         <a href="home.html">Trang chủ</a>
@@ -35,82 +36,49 @@
           <a href="order.html"><i class="fa fa-shopping-cart"></i></a>
         </form>
       </div>
+      
     </nav>
   </header>
-
+  <style>
+    tr, td, th{
+      border: 2px solid black;
+    }
+  </style>
   <main class="main-cell">
-    <fieldset class="fieldset-gird">
-      <div></div>
-
-      <div>
-        <legend>
-          <h1 class="h1-register">Đăng Ký</h1>
-        </legend>
+    <fieldset>
+      <h1>
+        <legend>ĐĂNG NHẬP</legend>
+      </h1>
+      <form method="get">
+        <table id="myTable">
+          <tbody>
+              <!-- Table rows will be added dynamically here -->
+          </tbody>
         <table class="table-center">
           <tr>
-            <td><i class="fa fa-envelope"></i></td>
             <td>
-              <label for="email">
-                <input class="textboxid" name="email" id="email" type="text" placeholder="Vui lòng nhập email"
-                  size="40px">
-              </label>
+              <p>Tổng thành tiền (A) =</p>
             </td>
           </tr>
-
           <tr>
-            <td><i class="fa fa-key"></i></td>
             <td>
-              <label for="password">
-                <input class="textboxid" id="password" type="password" placeholder="Vui lòng nhập mật khẩu" size="40px">
-              </label>
+              <p>Chiết khấu (B) =0.1 x A =</p>
             </td>
           </tr>
-
           <tr>
-            <td><i class="fa fa-key"></i></td>
             <td>
-              <label for="password">
-                <input class="textboxid" id="password" type="password" placeholder="Vui lòng nhập mật khẩu" size="40px">
-              </label>
+              <p>Thuế(C) = 10% x (A - B) =</p>
             </td>
           </tr>
-
           <tr>
-            <td><i class="fa fa-users"></i></td>
             <td>
-              <label for="memberType">
-                <input type="radio" name="memberType" value="silver">Bạc</input>
-                <input type="radio" name="memberType" value="gold">Vàng</input>
-                <input type="radio" name="memberType" value="platium">Bạch Kim</input>
-              </label>
-            </td>
-          </tr>
-
-          <tr>
-            <td><i class="fa fa-camera"></i></td>
-            <td>
-              <input class="textboxid" type="file" name="file" id="file">
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              Thông qua việc tạo tài khoản, bạn đồng ý với
-              <a href="">Điều khoản & Quyền riêng tư của chúng tôi.</a>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <input type="reset" value="Hủy">
-              <input type="submit" value="Đăng ký">
+              <p>Tổng Đơn hàng = A - B + C =</p>
             </td>
           </tr>
         </table>
-      </div>
-
-      <div></div>
+      </form>
+      <button id="btn1">Xác Nhận Đơn Hàng</button>
     </fieldset>
-
-
   </main>
 
   <footer class="footer-cell">
@@ -123,7 +91,8 @@
     <!--về đầu trang-->
     <a class="on-top" href=""></a>
   </footer>
-  <script scr="javascript.js"></script>
+
 </body>
+<script src="javascript.js"></script>
 
 </html>
