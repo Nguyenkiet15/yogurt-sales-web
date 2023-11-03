@@ -124,3 +124,65 @@ for( let i = 0; i < btn.length ; i++){
         addCart(i,input[i].value);
     })
 }
+
+
+
+// == LOGIN + REGISTER + CONTACT == //
+function validateEmail(form){
+    var reg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    //var myEmail = document.getElementById("email");
+    if (reg.test(form.email.value) == false){
+        alert("invalid Email!");
+        return false;
+    }
+    return true;
+}
+
+function validatePassLength(form){
+    var reg = /.{8,}/;
+ 
+     //var password = document.getElementById("password");
+     if (reg.test(form.password.value) == false){
+        alert("invalid Password!"); 
+        return false;
+     }
+     return true;
+ }  
+ 
+// login
+function formValidateSubmitLogin(form){
+     if (validateEmail(form) == false){
+        alert("invalid Email!");
+        return false;
+    }
+    if (validatePassLength(form) == false){
+        alert("invalid Password!");
+        return false;
+    }
+
+     alert("Login information has been sent!");
+     return true;
+}
+
+const password = document.querySelector('#password');
+// register
+function formValidateSubmitRegister(form){
+    if (validateEmail(form) == false){
+        alert("invalid Email!");
+        return false;
+    }
+    if (password.value.length < 8){
+        alert("invalid Password!");
+        return false;
+    }
+    alert("Registration information has been sent!");
+    return true;
+    
+}
+
+
+
+
+
+
+
